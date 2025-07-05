@@ -1,257 +1,239 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <title>Yumi - Profile</title>
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" type="image/x-icon" href="https://github.com/user-attachments/assets/b5feabb7-3f20-4028-9436-e3f3307dd2ae">
-    <meta name="description"
-        content="hello 👋 my name is Ahmad Wandi, I am a student at Antasari Banjarmasin State Islamic University, I really like machine learning">
-    <meta name="keywords" content="mayumiwandi, website, proxy, VPN, mayumi wandi, yumi, yui, mayumiyui">
-    <meta name="author" content="mayumiwandi" />
-    <meta name="copyright" content="© 2025 Yumi" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Yumi - Profile" />
-    <meta property="og:description"
-        content="hello, my name is Ahmad Wandi, I am a student at Antasari Banjarmasin State Islamic University, I really like machine learning" />
-    <meta property="og:url" content="https://mayumiwandi.github.io/" />
-    <meta property="og:site_name" content="Yumi - Profile" />
-    <meta property="og:image" content="https://github.com/user-attachments/assets/b5feabb7-3f20-4028-9436-e3f3307dd2ae" />
-    <meta property="og:locale" content="id_ID" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Yumi - Profile" />
-    <meta name="twitter:description"
-        content="hello, my name is Ahmad Wandi, I am a student at Antasari Banjarmasin State Islamic University, I really like machine learning" />
-    <meta name="twitter:image" content="https://github.com/user-attachments/assets/b5feabb7-3f20-4028-9436-e3f3307dd2ae" />
-    <meta name="twitter:site" content="@mayumiwandi" />
-    <meta name="twitter:creator" content="@mayumiwandi" />
-
-    <link rel="canonical" href="https://mayumiwandi.github.io/" />
-    <meta name="robots" content="index, follow" />
-    <meta name="geo.region" content="ID" />
-    <meta name="geo.placename" content="Indonesia" />
-
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-    <script src="https://kit.fontawesome.com/6fab3a0556.js" crossorigin="anonymous"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasbor Keren</title>
     <style>
-        /* copyright Ahmad Wandi */
-
         :root {
-            font-size: 62.5%;
+            --primary-bg: #1a1c29;
+            --secondary-bg: #222536;
+            --sidebar-bg: #1f2231;
+            --card-bg: #2a2d40;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a4b8;
+            --accent-color: #6a5acd;
+            --border-color: #3a3e59;
         }
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-        }
-       
-        body {
-            background-image: url("https://i.postimg.cc/8zX0j4cX/frieren-buka.jpg"); /* https://i.postimg.cc/d01cfDkp/frieren-limited.jpg*/
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed; /* Added to make background fixed */
-            width: 100%;
-            min-height: 100vh; /* Ensure body takes at least full viewport height */
-            display: flex; /* Use flexbox */
-            flex-direction: column; /* Arrange children vertically */
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        main {
-            flex-grow: 1; /* Allow main to grow and push footer down */
-            position: relative;
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: var(--sidebar-bg);
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li a {
+            color: var(--text-secondary);
+            text-decoration: none;
             display: flex;
             align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar ul li a:hover, .sidebar ul li a.active {
+            background-color: var(--accent-color);
+            color: var(--text-primary);
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header .search-bar {
+            background-color: var(--secondary-bg);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .header .search-bar input {
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            outline: none;
+        }
+
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .user-info span {
+            margin-right: 15px;
+        }
+
+        .header .user-info .profile-pic {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .card h3 {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .card p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .charts {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .chart {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .chart h3 {
+            margin-bottom: 15px;
+        }
+        
+        .chart-placeholder {
+            height: 300px;
+            background-color: var(--secondary-bg);
+            display: flex;
             justify-content: center;
-            flex-direction: column;
-            padding: 20px; /* Add some padding to prevent content touching edges on small screens */
-        }
-
-        .container {
-            width: 28rem;
-            padding: 1rem 2rem;
-            background-color: rgba(255, 255, 255, 0.45);
-            border-radius: 2rem;
-            border: 0.1rem solid rgba(255, 255, 255, 0.25);
-            box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.25);
-            backdrop-filter: blur(1.5rem);
-            min-width: 25rem;
-            box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
-            max-width: 95%; /* Added max-width to prevent overflow on very small screens */
-        }
-
-        .image {
-            width: 40%;
-            height: auto;
-            border-radius: 5rem;
-            display: block;
-            margin: 1rem auto;
-        }
-
-        hr {
-            border-color: #673146;
-        }
-
-        h1,
-        .occupation {
-            text-align: center;
-        }
-
-        h1 {
-            font-family: Muli, sans-serif; /* Make sure Muli font is available or linked */
-            font-weight: 700;
-            font-size: 2.3rem;
-        }
-
-        .occupation {
-            margin-bottom: 0.5rem;
-            font-size: 1.5rem;
-            font-family: "Space Mono", monospace; /* Make sure Space Mono font is available or linked */
-        }
-
-        .link-boxes {
-            margin: 2rem 1rem;
-            font-family: Muli, sans-serif; /* Make sure Muli font is available or linked */
-            font-weight: 700;
-            font-size: 1.4em;
-            text-transform: capitalize;
-
-        }
-
-        .link-boxes a {
-            text-decoration: none;
-            display: block;
-            color: #27213b;
-            border: 0.1rem solid #673146;
-            text-align: center;
-            margin: 0.7rem;
-            border-radius: 0.5rem;
-            padding: 0.3rem;
-            transition: all 200ms ease-in-out;
-            box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
-        }
-
-        .link-boxes a:hover {
-            border: 0.1rem solid #27213b;
-            background-color: #01bae9;
-            cursor: pointer;
-        }
-
-        .location {
-            text-align: center;
-            margin: 0.7rem;
-            font-size: 1.2rem;
-            font-family: "Space Mono", monospace; /* Make sure Space Mono font is available or linked */
+            align-items: center;
+            border-radius: 5px;
         }
 
         footer {
-            width: 100%; /* Ensure footer takes full width */
-            margin-top: auto; /* Push footer to the bottom */
-            padding: 10px 0; /* Add some padding */
-            color: white; /* Set text color for footer */
-            /* Remove fixed positioning if using flexbox centering */
-            /* position: fixed;
-            bottom: 0;
-            left: 0; */
-        }
-
-        footer p {
-             /* Adjust styling for the paragraph inside footer if needed */
-            margin: 0; /* Remove default paragraph margin */
-            font-size: 1.6rem; /* Ukuran teks copyright di layar besar */
-            font-weight: bold; /* Optional: membuat teks jadi tebal */
-        }
-        .footer-yumi-link {
-            color: inherit; /* Menggunakan warna teks dari parent (warna putih footer) */
-            text-decoration: none; /* Menghilangkan garis bawah default */
-            /* Animasi saat perubahan warna dan garis bawah */
-            transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-        }
-        .footer-yumi-link:hover {
-            color: #01bae9; /* Ganti warna saat disorot, gunakan warna yang kontras */
-            text-decoration: underline; /* Tambahkan garis bawah saat disorot */
-            cursor: pointer; /* Mengubah kursor */
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Horizontal offset, Vertical offset, Blur radius, Warna shadow */
-        }
-
-        @media only screen and (min-width:992px) {
-            .container {
-                width: 35rem; /* Allow slightly wider container on larger screens */
-            }
-
-            .image {
-                width: 30%; /* Slightly smaller image on larger screens relative to container */
-            }
-
-            h1 {
-                font-size: 2.8rem;
-            }
-
-            .occupation {
-                font-size: 1.6rem;
-            }
-
-            .link-boxes {
-                font-size: 1.6em;
-            }
-
-            .location {
-                font-size: 1.4rem;
-            }
-
-            footer p {
-                 font-size: 1.6rem;
-            }
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
         }
     </style>
-
-    </head>
-
+</head>
 <body>
-    <main>
-        <div class="container shadow">
-            <img class="image" src="https://i.postimg.cc/MHJ4zGHW/wandi-foto.png" alt="Wandi-Image" loading="lazy">
-            <h1> Yumi </h1>
-            <p class="occupation">I'am a student from Antasari State Islamic University</p>
-            <hr />
-            <div class="link-boxes">
-                <a class="shadow" title="View Yumi GitHub profile" href="https://github.com/mayumiwandi" target="_blank"><i
-                        class="fa fa-github icon" aria-hidden="true"></i> GitHub</a>
 
-                <a class="shadow" title="View Yumi Instagram profile" href="https://www.instagram.com/mayumiwandi/"
-                    target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram</a>
+    <div class="sidebar">
+        <h2>Dasbor Saya</h2>
+        <ul>
+            <li><a href="#" class="active">📊 Dasbor</a></li>
+            <li><a href="#">📈 Analitik</a></li>
+            <li><a href="#">📦 Produk</a></li>
+            <li><a href="#">👥 Pelanggan</a></li>
+            <li><a href="#">⚙️ Pengaturan</a></li>
+        </ul>
+    </div>
 
-                <a class="shadow" title="View Yumi Facebook profile" href="https://www.facebook.com/mayumiwandi"
-                    target="_blank"><i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook</a>
-
-                <a class="shadow" title="Send Message Telegram" href="https://t.me/Yumi_yui" target="_blank"><i
-                        class="fa-solid fa-paper-plane" aria-hidden="true"></i> Telegram</a>
-
-                <a class="shadow" title="View Yumi Tiktok profile" href="https://www.tiktok.com/@mayumiwandi" target="_blank"><i
-                        class="fa-brands fa-tiktok" aria-hidden="true"></i> Tiktok</a>
+    <div class="main-content">
+        <header class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Cari...">
             </div>
-            <hr />
-            <p class="location"><i class="fa fa-map-marker icon" aria-hidden="true"> </i> Banjarmasin, Indonesia</p>
-        </div>
-    </main>
-    <footer class="text-center">
-        <p>&#169;
-          <a href="https://t.me/Yumi_yui" class="footer-yumi-link" title="Link terkait Yumi">Yumi</a>, 2025</p>
-    </footer>
+            <div class="user-info">
+                <span>Halo, Pengguna!</span>
+                <div class="profile-pic"></div>
+            </div>
+        </header>
+
+        <main>
+            <div class="cards">
+                <div class="card">
+                    <h3>Penjualan Hari Ini</h3>
+                    <p>Rp 1.500.000</p>
+                </div>
+                <div class="card">
+                    <h3>Pengguna Baru</h3>
+                    <p>125</p>
+                </div>
+                <div class="card">
+                    <h3>Total Pesanan</h3>
+                    <p>54</p>
+                </div>
+                <div class="card">
+                    <h3>Pendapatan Bulan Ini</h3>
+                    <p>Rp 45.000.000</p>
+                </div>
+            </div>
+
+            <div class="charts">
+                <div class="chart">
+                    <h3>Statistik Pendapatan</h3>
+                    <div class="chart-placeholder">
+                        <p>[Placeholder untuk Bagan Area]</p>
+                    </div>
+                </div>
+                <div class="chart">
+                    <h3>Sumber Lalu Lintas</h3>
+                    <div class="chart-placeholder">
+                        <p>[Placeholder untuk Bagan Donat]</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Dasbor Keren. Dibuat dengan ❤️.</p>
+        </footer>
+    </div>
+
 </body>
 </html>
